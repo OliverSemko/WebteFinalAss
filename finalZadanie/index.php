@@ -21,6 +21,7 @@ $x = $_POST["r"];
 <!--        <input type="text" id="command" name="command">-->
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>
+    <h1>CAVKO</h1>
     <div class="canvas">
         <canvas id="myCanvas"></canvas>
         <canvas id="CanvasChart"></canvas>
