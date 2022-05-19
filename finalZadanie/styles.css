@@ -1,44 +1,55 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-html,body{
+
+html, body {
     width: 100%;
     height: 100%;
 }
-#nadpis{
+
+#nadpis {
     text-align: center;
 }
-.container{
+
+.container {
     text-align: center;
 }
-.canvas{
+
+.canvas {
     position: relative;
 }
-input{
+
+input {
     margin: 10px;
 }
-#command{
-    resize:both;
+
+#command {
+    resize: both;
     max-width: 400px;
     min-width: 200px;
     max-height: 200px;
     min-height: 100px;
 }
-#carCanvas{
+
+#carCanvas {
+    display: none;
     width: 500px !important;
     height: 300px !important;
-    border:1px solid #000000;
+    border: 1px solid #000000;
     position: relative;
     float: left;
 }
-#CanvasChart{
+
+#CanvasChart {
+    display: none;
     width: 500px !important;
     height: 300px !important;
     position: relative;
     float: right;
 }
-img{
+
+img {
     width: 50px;
     height: 50px;
     animation-name: rotate;
@@ -47,7 +58,42 @@ img{
     animation-timing-function: linear;
     border-radius: 50%;
 }
-@keyframes rotate{
-    from{ transform: rotate(-360deg); }
-    to{ transform: rotate(360deg); }
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+#langselector {
+    position: fixed;
+    left: 20px;
+    top: 30px;
+}
+
+#flag {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    position: fixed;
+    left: 20px;
+    top: 30px;
+}
+
+#Sk {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1200px-Flag_of_Slovakia.svg.png);
+}
+
+/*#chart{*/
+/*    float: left;*/
+/*}*/
+/*#vehicle{*/
+/*    float: right;*/
+/*}*/

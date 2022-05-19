@@ -14,24 +14,38 @@ $x = $_POST["r"];
 <body>
 
 <h1 id="nadpis">Zaverecne zadanie</h1>
+<div id="flag" onclick="flag()">
+</div>
+<!--<select id="langselector" >-->
+<!--      onchange="loadlang()">-->
+<!--    <option value="en" id="En">English</option>-->
+<!--    <option value="sk" id="Sk">Slovak</option>-->
+<!--</select>-->
 <div class="container">
     <form action="index.php" method="post">
         <label for="command">Zadanie príkazu:</label><br>
         <textarea id="command" name="command" placeholder="Zadajte príkaz"></textarea><br>
-<!--        <input type="text" id="command" name="command">-->
+        <!--        <input type="text" id="command" name="command">-->
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>
-    <h1>TOTO JE LEN PREDBEZNY NAVRH NEKRICTE</h1>
+    <div class="form-check form-check-inline">
+        <input type="checkbox" id="vehicle" name="vehicle" value="Car" onclick="foo()">
+        <label for="vehicle">Zobrazenie auta</label><br>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="checkbox" id="chart" name="chart" value="Chart" onclick="foo()" checked>
+        <label for="chart">Zobrazenie grafu</label><br>
+    </div>
     <div class="canvas">
         <canvas id="carCanvas">
         </canvas>
         <canvas id="CanvasChart"></canvas>
-        <img src="./images/iconmonstr-circle-5.svg" alt="circle">
     </div>
 </div>
 <?php
 echo $x;
 ?>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>
@@ -41,5 +55,6 @@ echo $x;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="scriptChart.js"></script>
 <script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
