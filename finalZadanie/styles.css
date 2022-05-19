@@ -52,8 +52,6 @@ input {
     height: 300px !important;
     position: relative;
     float: right;
-    /*background-color: rgb(166, 240, 151);*/
-    /*opacity: .6;*/
 }
 
 img {
@@ -103,13 +101,3 @@ footer {
     opacity: .6;
     text-align: center;
 }
-#Sk {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1200px-Flag_of_Slovakia.svg.png);
-}
-
-/*#chart{*/
-/*    float: left;*/
-/*}*/
-/*#vehicle{*/
-/*    float: right;*/
-/*}*/
