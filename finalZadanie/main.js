@@ -1,7 +1,7 @@
 const centreX = 80; const centreY = 100;
 const radius = 25;
 const rotateAngle = 36 * Math.PI / 180;
-const startAngle = 0 * Math.PI / 180;
+const startAngle = 0 / 180;
 const endAngle = 36 * Math.PI / 180;
 let counter = 0;
 let animFlag;
@@ -18,22 +18,22 @@ const drawCar=(y)=>{
     ctx1.fill();
 }
 
-function drawWheel() {
+function drawWheel(positionOfWheel) {
 
-    var canvas = document.getElementById("carCanvas");
+    const canvas = document.getElementById("carCanvas");
     if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+        const ctx = canvas.getContext("2d");
 
 
         for (let i = 0; i < 10; i++) {
             ctx.fillStyle = colours[i];
-            ctx.translate(centreX, centreY);
+            ctx.translate(centreX, centreY+positionOfWheel);
             ctx.rotate(rotateAngle);
-            ctx.translate(-centreX, -centreY);
+            ctx.translate(-centreX, -centreY-positionOfWheel);
             ctx.beginPath();
-            ctx.moveTo(centreX, centreY);
-            ctx.lineTo(centreX + radius, centreY);
-            ctx.arc(centreX, centreY, radius, startAngle, endAngle, false);
+            ctx.moveTo(centreX, centreY+positionOfWheel);
+            ctx.lineTo(centreX + radius, centreY+positionOfWheel);
+            ctx.arc(centreX, positionOfWheel+centreY, radius, startAngle, endAngle, false);
 
             ctx.closePath();
             ctx.fill();
@@ -42,15 +42,15 @@ function drawWheel() {
     }
 }
 
-function rotateWheel(rnd) {
+function rotateWheel(rnd, positionOfWheel) {
     const canvas = document.getElementById("carCanvas");
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
-        ctx.translate(centreX, centreY);
+        ctx.translate(centreX, centreY+positionOfWheel);
         ctx.rotate(rotateAngle);
-        ctx.translate(-centreX, -centreY);
+        ctx.translate(-centreX, -centreY-positionOfWheel);
 
-        drawWheel();
+        drawWheel(positionOfWheel);
 
         counter++;
         if (counter > rnd) {
@@ -61,7 +61,7 @@ function rotateWheel(rnd) {
 }
 
 setInterval(function() {
-   rotateWheel(60)
+   rotateWheel(10, 10)
 }, 100);
 drawCar(0)
 drawCar(10)
