@@ -1,0 +1,36 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#nadpis{
+    text-align: center;
+}
+.container{
+    text-align: center;
+}
+.canvas{
+    position: relative;
+}
+input{
+    margin: 10px;
+}
+#command{
+    resize:both;
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 100px;
+}
+#myCanvas{
+    width: 500px !important;
+    height: 300px !important;
+    border:1px solid #000000;
+    position: relative;
+    float: left;
+}
+#CanvasChart{
+    width: 500px !important;
+    height: 300px !important;
+    position: relative;
+    float: right;
+}
