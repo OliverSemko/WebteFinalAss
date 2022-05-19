@@ -14,7 +14,7 @@ $x = $_POST["r"];
 </head>
 <body>
 
-<h1 id="nadpis">Zaverecne zadanie</h1>
+<h1 id="nadpis">Záverečné zadanie</h1>
 <div id="flag" onclick="flag()">
 </div>
 <!--<select id="langselector" >-->
@@ -24,10 +24,9 @@ $x = $_POST["r"];
 <!--</select>-->
 <div class="container">
     <form action="index.php" method="post">
-        <label for="command">Zadanie príkazu:</label><br>
-        <textarea id="command" name="command" placeholder="Zadajte príkaz"></textarea><br>
-        <!--        <input type="text" id="command" name="command">-->
-        <input type="submit" value="Submit" class="btn btn-primary">
+        <label for="command" id="label_prikaz">Zadajte príkaz:</label><br>
+        <textarea id="command" name="command" placeholder="Príkaz..."></textarea><br>
+        <input type="submit" value="Potvrď" id="input_submit" class="btn btn-primary">
     </form>
     <div class="form-check form-check-inline">
         <input type="checkbox" id="vehicle" name="vehicle" value="Car" onclick="foo()">
@@ -43,6 +42,7 @@ $x = $_POST["r"];
         <canvas id="CanvasChart"></canvas>
     </div>
 </div>
+
 <?php
 echo $x;
 ?>
