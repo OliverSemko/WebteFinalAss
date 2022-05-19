@@ -41,9 +41,11 @@ input {
     display: none;
     width: 500px !important;
     height: 300px !important;
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
     position: relative;
     float: left;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #CanvasChart {
@@ -52,6 +54,8 @@ input {
     height: 300px !important;
     position: relative;
     float: right;
+    background-color: white;
+    border-radius: 10px;
 }
 
 img {
