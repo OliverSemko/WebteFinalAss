@@ -17,14 +17,16 @@ $x = $_POST["r"];
 <div class="container">
     <form action="index.php" method="post">
         <label for="command">Zadanie príkazu:</label><br>
-        <textarea id="command" name="command">Dajaky prikaz ktory sem zadas</textarea><br>
+        <textarea id="command" name="command" placeholder="Zadajte príkaz"></textarea><br>
 <!--        <input type="text" id="command" name="command">-->
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>
     <h1>TOTO JE LEN PREDBEZNY NAVRH NEKRICTE</h1>
     <div class="canvas">
-        <canvas id="myCanvas"></canvas>
+        <canvas id="carCanvas">
+        </canvas>
         <canvas id="CanvasChart"></canvas>
+        <img src="./images/iconmonstr-circle-5.svg" alt="circle">
     </div>
 </div>
 <?php
@@ -38,5 +40,6 @@ echo $x;
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="scriptChart.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
