@@ -7,7 +7,12 @@ html, body {
     width: 100%;
     height: 100%;
 }
-
+body{
+    background-image: url("https://media.istockphoto.com/photos/blurred-new-cars-dealership-place-picture-id504133748?b=1&k=20&m=504133748&s=170667a&w=0&h=FvgvPKB0hokUpcCF5-ybRcaRks6XbYJh5fP_0bOMC-I=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 #nadpis {
     text-align: center;
 }
@@ -47,6 +52,8 @@ input {
     height: 300px !important;
     position: relative;
     float: right;
+    /*background-color: rgb(166, 240, 151);*/
+    /*opacity: .6;*/
 }
 
 img {
@@ -86,7 +93,16 @@ img {
     left: 20px;
     top: 30px;
 }
-
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(120, 148, 127);
+    color: white;
+    opacity: .6;
+    text-align: center;
+}
 #Sk {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1200px-Flag_of_Slovakia.svg.png);
 }
