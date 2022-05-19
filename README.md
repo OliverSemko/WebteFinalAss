@@ -1,4 +1,4 @@
 # WebteFinalAss
 Final Assingment WEBTE2
 
-Toto finalne zadanie pre predmet Webove technologie.
+Finalne zadanie pre predmet Webove technologie.
