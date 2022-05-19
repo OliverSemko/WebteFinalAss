@@ -25,19 +25,18 @@ function flag() {
     else
         window.location.hash='#svk';
 
+    let language
     if(window.location.hash){
-        if (window.location.hash === "#eng"){
-            document.getElementById("label_prikaz").textContent = langdata.eng.command
-            document.getElementById("nadpis").textContent = langdata.eng.title
-            document.getElementById("command").placeholder = langdata.eng.command_placeholder
-            document.getElementById("input_submit").value = langdata.eng.submit
-        }
-        if (window.location.hash === "#svk"){
-            document.getElementById("label_prikaz").textContent = langdata.svk.command
-            document.getElementById("nadpis").textContent = langdata.svk.title
-            document.getElementById("command").placeholder = langdata.svk.command_placeholder
-            document.getElementById("input_submit").value = langdata.svk.submit
-        }
+        if (window.location.hash === "#eng")
+            language = langdata.eng
+        if (window.location.hash === "#svk")
+            language = langdata.svk
+        document.getElementById("label_prikaz").textContent = language.command
+        document.getElementById("nadpis").textContent = language.title
+        document.getElementById("command").placeholder = language.command_placeholder
+        document.getElementById("input_submit").value = language.submit
+        document.getElementById("car_label").textContent = language.label_car
+        document.getElementById("graph_label").textContent = language.label_graph
     }
 
     if (selectedFlag.style.backgroundImage === 'url("https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png")') {
@@ -55,13 +54,16 @@ let langdata = {
         command: "Write your command:",
         command_placeholder: "Command...",
         title: "Final assignment",
-        submit: "Submit"
-
+        submit: "Submit",
+        label_car: "Show car",
+        label_graph: "Show graph"
     },
     svk: {
         command: "Zadajte príkaz:",
         command_placeholder: "Príkaz...",
         title: "Záverečné zadanie",
-        submit: "Potvrď"
+        submit: "Potvrď",
+        label_car: "Zobrazenie auta",
+        label_graph: "Zobrazenie grafu"
     }
 }

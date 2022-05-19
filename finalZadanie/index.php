@@ -17,11 +17,6 @@ $x = $_POST["r"];
 <h1 id="nadpis">Záverečné zadanie</h1>
 <div id="flag" onclick="flag()">
 </div>
-<!--<select id="langselector" >-->
-<!--      onchange="loadlang()">-->
-<!--    <option value="en" id="En">English</option>-->
-<!--    <option value="sk" id="Sk">Slovak</option>-->
-<!--</select>-->
 <div class="container">
     <form action="index.php" method="post">
         <label for="command" id="label_prikaz">Zadajte príkaz:</label><br>
@@ -30,11 +25,11 @@ $x = $_POST["r"];
     </form>
     <div class="form-check form-check-inline">
         <input type="checkbox" id="vehicle" name="vehicle" value="Car" onclick="foo()">
-        <label for="vehicle">Zobrazenie auta</label><br>
+        <label for="vehicle" id="car_label">Zobrazenie auta</label><br>
     </div>
     <div class="form-check form-check-inline">
         <input type="checkbox" id="chart" name="chart" value="Chart" onclick="foo()" checked>
-        <label for="chart">Zobrazenie grafu</label><br>
+        <label for="chart" id="graph_label">Zobrazenie grafu</label><br>
     </div>
     <div class="canvas">
         <canvas id="carCanvas">
