@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="xkurek@147.175.98.113" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="xkurek@147.175.98.113">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/final/example-app" local="$PROJECT_DIR$/finalZadanie/example-app" web="/final/example-app" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
