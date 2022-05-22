@@ -17,7 +17,6 @@ $x = $_POST["r"];
 <body>
 
 <h1 id="nadpis">Záverečné zadanie</h1>
-<h1>Skuska ci to ide</h1>
 <div id="flag" onclick="flag()">
 </div>
 <div class="container">
