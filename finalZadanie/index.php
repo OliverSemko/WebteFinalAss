@@ -14,28 +14,22 @@ $x = $_POST["r"];
 </head>
 <body>
 
-<h1 id="nadpis">Zaverecne zadanie</h1>
+<h1 id="nadpis">Záverečné zadanie</h1>
 <div id="flag" onclick="flag()">
 </div>
-<!--<select id="langselector" >-->
-<!--      onchange="loadlang()">-->
-<!--    <option value="en" id="En">English</option>-->
-<!--    <option value="sk" id="Sk">Slovak</option>-->
-<!--</select>-->
 <div class="container">
     <form action="index.php" method="post">
-        <label for="command">Zadanie príkazu:</label><br>
-        <textarea id="command" name="command" placeholder="Zadajte príkaz"></textarea><br>
-        <!--        <input type="text" id="command" name="command">-->
-        <input type="submit" value="Submit" class="btn btn-primary">
+        <label for="command" id="label_prikaz">Zadajte príkaz:</label><br>
+        <textarea id="command" name="command" placeholder="Príkaz..."></textarea><br>
+        <input type="submit" value="Potvrď" id="input_submit" class="btn btn-primary">
     </form>
     <div class="form-check form-check-inline">
         <input type="checkbox" id="vehicle" name="vehicle" value="Car" onclick="foo()">
-        <label for="vehicle">Zobrazenie auta</label><br>
+        <label for="vehicle" id="car_label">Zobrazenie auta</label><br>
     </div>
     <div class="form-check form-check-inline">
         <input type="checkbox" id="chart" name="chart" value="Chart" onclick="foo()" checked>
-        <label for="chart">Zobrazenie grafu</label><br>
+        <label for="chart" id="graph_label">Zobrazenie grafu</label><br>
     </div>
     <div class="canvas">
         <canvas id="carCanvas">
@@ -43,6 +37,7 @@ $x = $_POST["r"];
         <canvas id="CanvasChart"></canvas>
     </div>
 </div>
+
 <?php
 echo $x;
 ?>
