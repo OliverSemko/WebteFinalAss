@@ -61,12 +61,16 @@ function rotateWheel(rnd, positionOfWheel) {
 }
 
 setInterval(function() {
-   rotateWheel(10, 10)
+    rotateWheel(10, 10)
 }, 100);
 drawCar(0)
 drawCar(10)
 
 function foo() {
+    const checkboxCar= document.getElementById("vehicle");
+    let Car = document.getElementById("carCanvas");
+    const checkboxChart= document.getElementById("chart");
+    let Chart = document.getElementById("MyChart");
     if (checkboxCar.checked === true) {
         Car.style.display = "block";
     } else {
@@ -78,3 +82,10 @@ function foo() {
         Chart.style.display = "none";
     }
 }
+
+const btn = document.getElementById("pdf");
+
+btn.addEventListener("click", function(){
+    var element = document.getElementById('popis');
+    html2pdf(element);
+});
