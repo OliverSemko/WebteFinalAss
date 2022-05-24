@@ -7,11 +7,16 @@ html, body {
     width: 100%;
     height: 100%;
 }
+/*#popis{*/
+/*    display: none;*/
+/*}*/
 body{
     background-image: url("https://a1industrialtrucks.co.uk/wp-content/uploads/2018/11/webplunder-background-image-technology-online-website-solutions.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 25px;
 }
 #nadpis {
     text-align: center;
@@ -23,6 +28,8 @@ body{
 
 .canvas {
     position: relative;
+    width: 1050px;
+    min-height: 350px;
 }
 
 input {
@@ -38,24 +45,22 @@ input {
 }
 
 #carCanvas {
-    display: none;
+    /*display: none;*/
     width: 500px !important;
     height: 300px !important;
-    /*border: 1px solid #000000;*/
-    position: relative;
-    float: left;
     background-color: white;
     border-radius: 10px;
+    float: left;
 }
 
-#CanvasChart {
-    display: none;
+#MyChart {
+    /*display: none;*/
     width: 500px !important;
     height: 300px !important;
-    position: relative;
-    float: right;
     background-color: white;
     border-radius: 10px;
+    min-height: 300px !important;
+    float: right;
 }
 
 img {
@@ -96,12 +101,30 @@ img {
     top: 30px;
 }
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: rgb(120, 148, 127);
     color: white;
     opacity: .6;
     text-align: center;
+}
+button{
+    margin: 5px;
+}
+/*footer {*/
+/*    position: fixed;*/
+/*    padding: 10px 10px 0px 10px;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    height: 40px;*/
+/*    background-color: rgb(120, 148, 127);*/
+/*}*/
+#popis{
+    text-align: center;
+    /*position: absolute;*/
+    /*right: 80px;*/
+    /*top: 10px;*/
+    /*width: 1000px;*/
+}
+p{
+    margin: 0px;
 }

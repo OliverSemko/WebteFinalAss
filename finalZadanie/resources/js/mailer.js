@@ -29,7 +29,11 @@ var Email = {
         return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t
     }
 };
+<<<<<<< HEAD
 //18afb8fe-566a-4e34-83ac-b8903cc19182
+=======
+
+>>>>>>> origin/main
 function mailik() {
     Email.send({
         SecureToken: "23a6497ab9b58efb7683dfeaaa795a60",

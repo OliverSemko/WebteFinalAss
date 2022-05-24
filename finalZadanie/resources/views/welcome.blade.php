@@ -14,7 +14,6 @@
     <h1 id="nadpis">Záverečné zadanie</h1>
     <div id="flag" onclick="flag()"></div>
 </header>
-
 <main>
     <div>
         <label for="name" id="input_name">Zadaj meno: </label>
