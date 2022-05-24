@@ -1,5 +1,9 @@
-const selectedFlag = document.getElementById('flag');
-let currentFLag = "britain";
+var checkboxCar = document.getElementById("vehicle");
+var checkboxChart = document.getElementById("chart");
+var Car = document.getElementById("carCanvas");
+var Chart = document.getElementById("CanvasChart");
+var selectedFlag = document.getElementById('flag');
+var currentFLag = "britain"
 selectedFlag.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png)";
 
 function flag() {
@@ -16,7 +20,6 @@ function flag() {
             language = langdata.svk
         document.getElementById("input_name").innerText = language.input_name
         document.getElementById("input_mail").innerText = language.input_mail
-        document.getElementById("nadpis").innerText = language.title
     }
 
     if (selectedFlag.style.backgroundImage === 'url("https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png")') {
@@ -31,13 +34,11 @@ function flag() {
 
 let langdata = {
     eng: {
-        input_name: "Your name:",
-        input_mail: "Your e-mail:",
-        title: "Final assignment:"
+        input_name: "Your name",
+        input_mail: "Your e-mail"
     },
     svk: {
-        input_name: "Zadaj meno:",
-        input_mail: "Zadaj e-mail:",
-        title: "Záverečné zadanie:"
+        input_name: "Zadaj meno",
+        input_mail: "Zadaj e-mail"
     }
 }

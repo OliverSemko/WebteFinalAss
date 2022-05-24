@@ -18,6 +18,10 @@ function array2csv(array &$array) {
     if (count($array) == 0) {
         return null;
     }
+<<<<<<< HEAD
+=======
+    ob_start();
+>>>>>>> origin/main
 
     $csvFile = 'logy.csv';
     $df = fopen($csvFile, 'w');
@@ -26,12 +30,20 @@ function array2csv(array &$array) {
         die('Error opening csv file ');
     }
 
+<<<<<<< HEAD
+=======
+    ob_end_clean();
+>>>>>>> origin/main
     fputcsv($df, array_keys(reset($array)));
 
     foreach ($array as $row) {
         fputcsv($df, $row);
     }
     fclose($df);
+<<<<<<< HEAD
+=======
+    ob_get_clean();
+>>>>>>> origin/main
     return $csvFile;
 }
 
@@ -75,7 +87,15 @@ function sendmail() {
     $mail->addAddress($to);
     $mail->Subject = ("$subject");
     $mail->Body = $body;
+<<<<<<< HEAD
     $mail->send();
     header("Location: main.php");
     exit;
+=======
+    if ($mail->send()) {
+        echo "Email is sent!";
+    } else {
+        echo "Something is wrong: <br><br>" . $mail->ErrorInfo;
+    }
+>>>>>>> origin/main
 }

@@ -20,5 +20,3 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             [date('d-m-y h:i:s', time()),$data["r"], true]);
     }
 }
-
-
