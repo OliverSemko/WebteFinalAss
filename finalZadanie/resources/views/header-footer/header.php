@@ -13,10 +13,18 @@ $x = $_POST["r"];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/print.css">
 </head>
 <body>
 <header>
     <h1 id="nadpis">Záverečné zadanie</h1>
     <div id="flag" onclick="flag()"></div>
+    <br><br>
+    <form id="addUser">
+        <label for="name" id="name">Zadaj meno:</label>
+        <input id="name" type="text">
+        <button onclick="logIn(event)" class="btn btn-primary" id="login_butt">Prihlásenie</button>
+    </form>
+    <button id="changeUser" class="btn btn-primary" style="display: none" onclick="changeUser()">Odhlásiť</button>
 </header>
 <main>
