@@ -18,14 +18,8 @@ function flag() {
             language = langdata.eng
         if (window.location.hash === "#svk")
             language = langdata.svk
-        document.getElementById("label_prikaz").textContent = language.command
-        document.getElementById("nadpis").textContent = language.title
-        document.getElementById("command").placeholder = language.command_placeholder
-        document.getElementById("input_submit").value = language.submit
-        document.getElementById("car_label").textContent = language.label_car
-        document.getElementById("graph_label").textContent = language.label_graph
-        document.getElementById("input_name").textContent = language.input_name
-        document.getElementById("input_mail").textContent = language.input_mail
+        document.getElementById("input_name").innerText = language.input_name
+        document.getElementById("input_mail").innerText = language.input_mail
     }
 
     if (selectedFlag.style.backgroundImage === 'url("https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png")') {
@@ -40,22 +34,10 @@ function flag() {
 
 let langdata = {
     eng: {
-        command: "Write your command:",
-        command_placeholder: "Command...",
-        title: "Final assignment",
-        submit: "Submit",
-        label_car: "Show car",
-        label_graph: "Show graph",
         input_name: "Your name",
         input_mail: "Your e-mail"
     },
     svk: {
-        command: "Zadajte príkaz:",
-        command_placeholder: "Príkaz...",
-        title: "Záverečné zadanie",
-        submit: "Potvrď",
-        label_car: "Zobrazenie auta",
-        label_graph: "Zobrazenie grafu",
         input_name: "Zadaj meno",
         input_mail: "Zadaj e-mail"
     }
