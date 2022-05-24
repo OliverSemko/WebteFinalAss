@@ -22,24 +22,8 @@
         <canvas id="CanvasChart"></canvas>
     </div>
 </div>
-<?php
-require_once "MyPdo.php";
-if (isset($_POST["Potvrď"]) && isset($_POST["command"])) {
-    try {
-        $myPdo = new MyPDO();
-        $myPdo->run("INSERT into measurement
-            (`date`, `r`, `error`) values (?, ?, ?)",
-            [date('d-m-y h:i:s'), $_POST["command"], false]);
 
-    } //catch exception
-    catch (Exception $e) {
-        $myPdo = new MyPDO();
-        $myPdo->run("INSERT into measurement
-            (`date`, `r`, `error`) values (?, ?, ?)",
-            [date('d-m-y h:i:s'), $_POST["command"], false]);
-    }
-}
 
-?>
+
 
 <?php include 'header-footer/footer.php' ?>
