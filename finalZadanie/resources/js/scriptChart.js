@@ -1,22 +1,20 @@
-let label = [];
 let dataFromResponse = [];
 
 function getData(event){
     event.preventDefault();
-    label = [];
     dataFromResponse = [];
     const command = document.getElementById("command");
     fetch("https://site82.webte.fei.stuba.sk/final/example-app/resources/views/octave.php?r=" + command.value)
         .then(response => response.json())
         .then(response => {
             for (let i = 2; i < response.length; i++){
-                label.push(i - 2);
                 let responseData = response[i].trim();
                 dataFromResponse.push(responseData);
             }
+            dataFromResponse.pop();
+            dataFromResponse.push("0.00000")
         })
     console.log(generateApiKey());
-    console.log(label);
     console.log(dataFromResponse);
 }
 //

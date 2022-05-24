@@ -65,3 +65,16 @@ setInterval(function() {
 }, 100);
 drawCar(0)
 drawCar(10)
+
+function foo() {
+    if (checkboxCar.checked === true) {
+        Car.style.display = "block";
+    } else {
+        Car.style.display = "none";
+    }
+    if (checkboxChart.checked === true) {
+        Chart.style.display = "block";
+    } else {
+        Chart.style.display = "none";
+    }
+}
