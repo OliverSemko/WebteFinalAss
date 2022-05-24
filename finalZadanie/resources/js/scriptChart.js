@@ -1,7 +1,8 @@
 let dataFromResponse = [];
 const csvFileData = [];
 
-function getData(event) {
+
+function getData(event){
     event.preventDefault();
     dataFromResponse = [];
     const command = document.getElementById("command");
@@ -14,8 +15,8 @@ function getData(event) {
             }
             dataFromResponse.pop();
             dataFromResponse.push("0.00000")
-            console.log(dataFromResponse)
-            slowChart(dataFromResponse)
+            console.log(dataFromResponse);
+            slowChart(dataFromResponse);
         })
     try {
 
@@ -88,9 +89,24 @@ async function slowChart(dataSet) {
             data: subarray
         }])
     }
-}
+};
 
 //slowChart();
+    let data = {
+        r: command.value
+    };
+
+    fetch("https://site82.webte.fei.stuba.sk/final/example-app/resources/views/command.php", {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }).then(res => {
+        console.log("Request complete! response:", res);
+    });
+    // console.log(generateApiKey());
+    console.log(dataFromResponse);
+    // fnGenerateChart(dataFromResponse);
+
 
 // const data = {
 //     datasets: [{
@@ -281,3 +297,108 @@ async function slowChart(dataSet) {
 //     initialize();
 //     advance();
 // };
+
+var samples = 20;
+var speed = 250;
+let timeout = samples * speed;
+var values = [];
+var labels = [];
+var charts = [];
+var value = 0;
+var scale = 1;
+
+addEmptyValues(values, samples);
+
+
+
+var originalCalculateXLabelRotation = Chart.Scale.prototype.calculateXLabelRotation
+
+function initialize() {
+    charts.push(new Chart(document.getElementById('CanvasChart'), {
+            type: 'line',
+            data: {
+                //labels: labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 2,
+                    lineTension: 0.25,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                animation: {
+                    duration: speed * 1.5,
+                    easing: 'linear'
+                },
+                legend: false,
+                scales: {
+                    xAxes: [{
+                        type: "time",
+                        display: true
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            max: 1,
+                            min: -1
+                        }
+                    }]
+                }
+            }
+        })
+    );
+}
+
+function addEmptyValues(arr, n) {
+    for(var i = 0; i < n; i++) {
+        arr.push({
+            x: moment().subtract((n - i) * speed, 'milliseconds').toDate(),
+            y: null
+        });
+    }
+}
+
+function rescale() {
+    var padding = [];
+
+    addEmptyValues(padding, 10);
+    values.splice.apply(values, padding);
+
+    scale++;
+}
+
+function updateCharts(){
+    charts.forEach(function(chart) {
+        chart.update();
+    });
+}
+
+function progress() {
+    value = dataFromResponse;
+    values.push({
+        x: new Date(),
+        y: value
+    });
+    values.shift();
+}
+
+function advance() {
+    if (values[0] !== null && scale < 4) {
+        //rescale();
+        updateCharts();
+    }
+
+    progress();
+    updateCharts();
+
+    setTimeout(function() {
+        requestAnimationFrame(advance);
+    }, speed);
+}
+
+window.onload = function() {
+    initialize();
+    advance();
+};
