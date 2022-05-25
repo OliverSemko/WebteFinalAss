@@ -8,7 +8,6 @@ class MyPDO
 
     public function __construct()
     {
-        //new MyPDO("mysql:host=localhost;dbname=zad5", "rabek", "secret");
         $opt = array(
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
