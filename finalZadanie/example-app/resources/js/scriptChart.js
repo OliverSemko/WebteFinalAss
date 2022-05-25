@@ -25,8 +25,8 @@ function getData(event) {
                     let responseData = response[i].trim();
                     dataFromResponse.push(responseData);
                 }
-                dataFromResponse.pop();
-                dataFromResponse.push("0.00000")
+                // dataFromResponse.pop();
+                // dataFromResponse.push("0.00000")
                 // upCar()
                 //slowChart(dataFromResponse)
             })
@@ -37,8 +37,8 @@ function getData(event) {
                     let responseData2 = response[i].trim();
                     dataFromResponse2.push(responseData2);
                 }
-                dataFromResponse2.pop();
-                dataFromResponse2.push("0.00000")
+                // dataFromResponse2.pop();
+                // dataFromResponse2.push("0.00000")
                 //upCar()
                 slowChart(dataFromResponse, dataFromResponse2)
 
@@ -159,12 +159,12 @@ async function slowChart(dataSet, dataSet2) {
         // wheel.style.top=-dataSet[i]+"px";
         // console.log(posWheel);
         // if (a >= 0) {
-        if(dataSet[i]!==0){
+        // if(dataSet[i]!==0){
             newposWhe = posWheel - dataSet[i] + parseFloat(input);
             wheel.style.top = newposWhe + "px";
-        }else{
-            wheel.style.top = posWheel + "px";
-        }
+        // }else{
+        //     wheel.style.top = posWheel + "px";
+        // }
         // }else {
         //     newposWhe = posWheel + dataSet[i] - parseFloat(input);
         //     wheel.style.top = newposWhe + "px";
@@ -185,7 +185,7 @@ async function slowChart(dataSet, dataSet2) {
             data: subarray2
         }])
 }
-
+wheel.style.top="-115px";
 document.getElementById("input_submit").disabled = false
 }
 
